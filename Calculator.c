@@ -9,6 +9,10 @@ void calculator(int num1, int num2, int opt)
         break;
 
     case 2:
+        printf("The Substraction of %d  and %d is: %d\n", num1, num2, num1 - num2);
+        break;
+
+    case 3:
         printf("Thank you for using!");
         break;
 
@@ -27,7 +31,7 @@ int main()
     scanf("%d", &num2);
 
     printf("\nInput your option :\n");
-    printf("1-Addition.\n2-Exit.\n");
+    printf("1-Addition.\n2-Substraction.\n3-Exit.\n");
     scanf("%d", &opt);
     calculator(num1, num2, opt);
     return 0;
