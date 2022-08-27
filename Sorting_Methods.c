@@ -2,6 +2,26 @@
 #include <math.h>
 #include <stdio.h>
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// BUBBLE SORT
+//  perform the bubble sort
+void bubbleSort(int array[], int size)
+{
+
+        for (int step = 0; step < size - 1; ++step)
+    {
+        for (int i = 0; i < size - step - 1; ++i)
+        {
+            if (array[i] > array[i + 1])
+            {
+                int temp = array[i];
+                array[i] = array[i + 1];
+                array[i + 1] = temp;
+            }
+        }
+    }
+}
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // SELECTION SORT
 //  function to swap the the position of two elements
@@ -69,7 +89,7 @@ int main()
     int arr[n];
     for (int i = 0; i < n; i++)
         scanf("%d", &arr[i]);
-    selectionSort(arr, n);
+    bubbleSort(arr, n);
     printArray(arr, n);
 
     return 0;
